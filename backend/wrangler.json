@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "backend",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-02-05",
+  "compatibility_flags": ["nodejs_compat"],
+  "build": {
+    "external": ["mock-aws-s3", "aws-sdk", "nock"]
+  },
+  "vars": {
+    "DATABASE_URL": "prisma://accelerate.prisma-data.net/?api_key=...",
+    "JWT_SECRET": "ahmed"
+  }
+}
